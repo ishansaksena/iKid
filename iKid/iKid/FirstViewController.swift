@@ -9,7 +9,7 @@
 import UIKit
 
 // Puns
-class questionViewController: UIViewController {
+class FirstViewController: UIViewController {
     
     private var questionViewController : QuestionViewController!
     private var punchlineViewController : Punchline!
@@ -36,18 +36,19 @@ class questionViewController: UIViewController {
     }
     
     
-    @IBAction func switchViews(sender: UIButton) {
-        questionVCBuilder()
+    @IBAction func switchViews(sender: UIBarButtonItem) {
+        
         punchlineVCBuilder()
+        questionVCBuilder()
         UIView.beginAnimations("View Flip", context: nil)
         UIView.setAnimationDuration(0.4)
         UIView.setAnimationCurve(.EaseInOut)
         
         if questionViewController != nil &&
             questionViewController?.view.superview != nil {
-                UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
-                punchlineViewController.view.frame = view.frame
-                switchViewController(questionViewController, to: punchlineViewController)
+            UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
+            punchlineViewController.view.frame = view.frame
+            switchViewController(questionViewController, to: punchlineViewController)
         }
         else {
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
