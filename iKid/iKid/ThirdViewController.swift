@@ -11,6 +11,9 @@ import UIKit
 // Knock Knock
 class ThirdViewController: UIViewController {
 
+    
+    @IBOutlet weak var whoButton: UIBarButtonItem!
+    @IBOutlet weak var knockOGLabel: UILabel!
     private var questionViewController : QuestionViewController!
     private var punchlineViewController : Punchline!
     private var jokeIndex: Int = 0
@@ -46,19 +49,25 @@ class ThirdViewController: UIViewController {
         UIView.setAnimationDuration(0.4)
         UIView.setAnimationCurve(.EaseInOut)
         
+        // to punchline
         if questionViewController != nil &&
             questionViewController?.view.superview != nil {
             punchlineViewController.PunchlineLabel.text = jokes[jokeIndex]?.1
             UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
             punchlineViewController.view.frame = view.frame
             switchViewController(questionViewController, to: punchlineViewController)
+            whoButton.title = "Next"
         }
-        else {
+        else {// to Question
+            knockOGLabel.text = ""
             jokeIndex += 1
             questionViewController.QuestionLabel.text = jokes[jokeIndex]?.0
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             questionViewController.view.frame = view.frame
             switchViewController(punchlineViewController, to: questionViewController)
+            if ((jokes[jokeIndex]?.0) != nil) {
+                whoButton.title = "\(jokes[jokeIndex]!.0) who?"
+            }
         }
         UIView.commitAnimations()
     }

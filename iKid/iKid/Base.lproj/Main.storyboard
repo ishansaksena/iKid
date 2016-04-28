@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Puns-->
@@ -51,17 +52,31 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xnD-e3-d5e">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="get PUNchline" id="8Hj-9a-7az">
+                                    <barButtonItem title="Who's there" id="8Hj-9a-7az">
                                         <connections>
                                             <action selector="switchViews:" destination="aWU-eM-dPl" id="zHR-cY-UZ7"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock-Knock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bna-3F-MF2">
+                                <rect key="frame" x="249" y="289" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bna-3F-MF2" firstAttribute="centerY" secondItem="oxN-HO-v3C" secondAttribute="centerY" id="4Cv-BJ-spe"/>
+                            <constraint firstItem="bna-3F-MF2" firstAttribute="centerX" secondItem="oxN-HO-v3C" secondAttribute="centerX" id="NwE-5y-GKS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Knock Knock" id="m2K-wv-AHJ"/>
+                    <connections>
+                        <outlet property="knockOGLabel" destination="bna-3F-MF2" id="AAY-Kl-Vb1"/>
+                        <outlet property="whoButton" destination="8Hj-9a-7az" id="HYn-RB-dmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJF-Uq-cG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,8 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Punchline" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihL-Fn-leL">
-                                <rect key="frame" x="248" y="286" width="104" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punchline" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihL-Fn-leL">
+                                <rect key="frame" x="20" y="286" width="560" height="27"/>
                                 <accessibility key="accessibilityConfiguration" identifier="punchlineLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -89,7 +104,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ihL-Fn-leL" firstAttribute="centerY" secondItem="67k-rc-Gh3" secondAttribute="centerY" id="iCk-D5-ZtG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ihL-Fn-leL" secondAttribute="trailing" id="5jG-Pt-uOm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ihL-Fn-leL" secondAttribute="leading" id="DjV-hu-0ze"/>
+                            <constraint firstItem="ihL-Fn-leL" firstAttribute="centerY" secondItem="67k-rc-Gh3" secondAttribute="centerY" id="Ywf-qY-VDY"/>
                             <constraint firstItem="ihL-Fn-leL" firstAttribute="centerX" secondItem="67k-rc-Gh3" secondAttribute="centerX" id="xJr-Bi-3zr"/>
                         </constraints>
                     </view>
@@ -99,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rY0-QF-q5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="716"/>
+            <point key="canvasLocation" x="0.0" y="721"/>
         </scene>
         <!--Dad jokes-->
         <scene sceneID="wg7-f3-ORb">
@@ -116,7 +133,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-VF-gEA">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="get PUNchline" id="LoJ-OX-5PW">
+                                    <barButtonItem title="Next" id="LoJ-OX-5PW">
                                         <connections>
                                             <action selector="switchViews:" destination="8rJ-Kc-sve" id="KCc-Zi-cpN"/>
                                         </connections>
@@ -144,10 +161,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-6B-y3h">
-                                <rect key="frame" x="266" y="290" width="69" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-6B-y3h">
+                                <rect key="frame" x="20" y="287" width="560" height="27"/>
                                 <accessibility key="accessibilityConfiguration" identifier="questionLabel"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -155,7 +172,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qrh-6B-y3h" firstAttribute="centerX" secondItem="1ME-4g-Fth" secondAttribute="centerX" id="1QG-cQ-mM0"/>
-                            <constraint firstItem="Qrh-6B-y3h" firstAttribute="centerY" secondItem="1ME-4g-Fth" secondAttribute="centerY" id="WDg-sT-QL0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Qrh-6B-y3h" secondAttribute="leading" id="D3B-qP-P0o"/>
+                            <constraint firstItem="Qrh-6B-y3h" firstAttribute="centerY" secondItem="1ME-4g-Fth" secondAttribute="centerY" id="iEx-uq-M4d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qrh-6B-y3h" secondAttribute="trailing" id="pn5-yN-AGf"/>
                         </constraints>
                     </view>
                     <connections>
