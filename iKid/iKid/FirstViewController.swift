@@ -13,7 +13,9 @@ class FirstViewController: UIViewController {
     
     private var questionViewController : QuestionViewController!
     private var punchlineViewController : Punchline!
- 
+    private var jokeIndex: Int = 0
+    private var jokes = punJokes
+    
     // Instantiates
     private func punchlineVCBuilder() {
         if punchlineViewController == nil {
@@ -44,16 +46,17 @@ class FirstViewController: UIViewController {
         UIView.setAnimationDuration(0.4)
         UIView.setAnimationCurve(.EaseInOut)
         
-        // From question to punchline
+        // to punchline
         if questionViewController != nil &&
             questionViewController?.view.superview != nil {
-            questionViewController.QuestionLabel.text = "Party on people"
+            punchlineViewController.PunchlineLabel.text = jokes[jokeIndex]?.1
             UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
             punchlineViewController.view.frame = view.frame
             switchViewController(questionViewController, to: punchlineViewController)
         }
-        else {// From punchline to question
-            questionViewController.QuestionLabel.text = "Party on people"
+        else {// to question
+            jokeIndex += 1
+            questionViewController.QuestionLabel.text = jokes[jokeIndex]?.0
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             questionViewController.view.frame = view.frame
             switchViewController(punchlineViewController, to: questionViewController)

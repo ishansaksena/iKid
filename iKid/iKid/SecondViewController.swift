@@ -13,6 +13,8 @@ class SecondViewController: UIViewController {
     
     private var questionViewController : QuestionViewController!
     private var punchlineViewController : Punchline!
+    private var jokeIndex: Int = 0
+    private var jokes = dadJokes
     
     // Instantiates
     private func punchlineVCBuilder() {
@@ -46,11 +48,14 @@ class SecondViewController: UIViewController {
         
         if questionViewController != nil &&
             questionViewController?.view.superview != nil {
+            punchlineViewController.PunchlineLabel.text = jokes[jokeIndex]?.1
             UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
             punchlineViewController.view.frame = view.frame
             switchViewController(questionViewController, to: punchlineViewController)
         }
         else {
+            jokeIndex += 1
+            questionViewController.QuestionLabel.text = jokes[jokeIndex]?.0
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             questionViewController.view.frame = view.frame
             switchViewController(punchlineViewController, to: questionViewController)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EE9F46D1CD2993300F077D0 /* JokesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9F46C1CD2993300F077D0 /* JokesData.swift */; };
 		A2FDFEC91CD1BF180058DCA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDFEC81CD1BF180058DCA7 /* AppDelegate.swift */; };
 		A2FDFECB1CD1BF180058DCA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDFECA1CD1BF180058DCA7 /* FirstViewController.swift */; };
 		A2FDFECD1CD1BF180058DCA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDFECC1CD1BF180058DCA7 /* SecondViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EE9F46C1CD2993300F077D0 /* JokesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesData.swift; sourceTree = "<group>"; };
 		A2FDFEC51CD1BF180058DCA7 /* iKid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iKid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FDFEC81CD1BF180058DCA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2FDFECA1CD1BF180058DCA7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				A2FDFED11CD1BF180058DCA7 /* Assets.xcassets */,
 				A2FDFED31CD1BF180058DCA7 /* LaunchScreen.storyboard */,
 				A2FDFED61CD1BF180058DCA7 /* Info.plist */,
+				6EE9F46C1CD2993300F077D0 /* JokesData.swift */,
 			);
 			path = iKid;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				A2FDFEE71CD1CFB60058DCA7 /* QuestionViewController.swift in Sources */,
 				A2FDFEE31CD1C5110058DCA7 /* ThirdViewController.swift in Sources */,
 				A2FDFECB1CD1BF180058DCA7 /* FirstViewController.swift in Sources */,
+				6EE9F46D1CD2993300F077D0 /* JokesData.swift in Sources */,
 				A2FDFEE51CD1C7580058DCA7 /* Punchline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,7 @@
 				A2FDFEDB1CD1BF180058DCA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
