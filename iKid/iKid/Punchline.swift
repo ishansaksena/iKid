@@ -10,6 +10,7 @@ import UIKit
 
 class Punchline: UIViewController {
 
+    @IBOutlet weak var PunchlineLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -44,13 +44,16 @@ class FirstViewController: UIViewController {
         UIView.setAnimationDuration(0.4)
         UIView.setAnimationCurve(.EaseInOut)
         
+        // From question to punchline
         if questionViewController != nil &&
             questionViewController?.view.superview != nil {
+            questionViewController.QuestionLabel.text = "Party on people"
             UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
             punchlineViewController.view.frame = view.frame
             switchViewController(questionViewController, to: punchlineViewController)
         }
-        else {
+        else {// From punchline to question
+            questionViewController.QuestionLabel.text = "Party on people"
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             questionViewController.view.frame = view.frame
             switchViewController(punchlineViewController, to: questionViewController)

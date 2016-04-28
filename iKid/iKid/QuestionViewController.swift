@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
+    @IBOutlet weak var QuestionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
