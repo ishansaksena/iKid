@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  iKid
 //
-//  Created by ishansaksena on 4/26/16.
-//  Copyright © 2016 ishansaksena. All rights reserved.
+//  Created by Ishan Saksena on 4/27/16.
+//  Copyright © 2016 Ishan Saksena. All rights reserved.
 //
 
 import UIKit
